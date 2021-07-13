@@ -13,17 +13,6 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCKiI6NFtFdbl1rFC0redvxdrLySQ6aX68",
-//   authDomain: "letmeask-ef5a1.firebaseapp.com",
-//   projectId: process.env.REACT_APP_PROJECT_ID,
-//   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_MESSASING_SENDER_ID,
-//   appId: process.env.REACT_APP_APP_ID,
-//   measurementId: process.env.REACT_APP_MEASUREMENT_ID
-// };
-
-
 firebase.initializeApp(firebaseConfig)
 
 const auth = firebase.auth()
