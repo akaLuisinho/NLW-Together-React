@@ -1,32 +1,40 @@
+import { useHistory } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../App'
+
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
 
-import { useHistory } from 'react-router-dom'
-
 import { Button } from '../components/Button'
 
 import '../styles/auth.scss'
- 
+
 export function Home() {
     const history = useHistory()
 
-    function navigateToNewRoom() {
-        history.push('/rooms/new')
+    const { user, signInWithGoogle} = useContext(AuthContext)
+
+    function handleCreateRoom() {
+        if(!user) {
+            signInWithGoogle()
+        }
+
+        history.push("/rooms/new")
     }
 
     return (
-         <div id="page-auth">
-             <aside>
-                <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
+        <div id="page-auth">
+            <aside>
+                <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
                 <p>Tire as dúvidas da sua audiência em tempo-real</p>
-             </aside>
+            </aside>
 
-             <main>
+            <main>
                 <div className="main-content">
                     <img src={logoImg} alt="letmeask" />
-                    <button onClick={navigateToNewRoom} className="create-room">
+                    <button onClick={handleCreateRoom} className="create-room">
                         <img src={googleIconImg} alt="Logo do Google" />
                         Crie sua sala com google
                     </button>
@@ -44,7 +52,6 @@ export function Home() {
                     </form>
                 </div>
             </main>
-
         </div>
     )
 }

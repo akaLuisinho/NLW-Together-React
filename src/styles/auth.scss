@@ -13,7 +13,7 @@
         flex-direction: column;
         justify-content: center;
 
-        padding: 120px 80px
+        padding: 120px 80px;
 
         img {
             max-width: 320px;
@@ -60,9 +60,9 @@
             margin: 64px 0px 24px;
             font-family: 'Poppins', sans-serif;
         }
+
         form {
             input {
-                max-width: 285px;
 
                 height: 50px;
                 border-radius: 9px;
@@ -118,7 +118,8 @@
         font-size: 14px;
         color: #a8a8b3;
 
-        margin: 32px;
+        margin: 32px 0px;
+
         display: flex;
         align-items: center;
 
