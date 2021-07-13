@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../App'
@@ -9,6 +10,7 @@ import { Button } from '../components/Button'
 import '../styles/auth.scss'
 
 export function NewRoom() {
+
     const { user } = useContext(AuthContext)
 
     return (
@@ -23,6 +25,7 @@ export function NewRoom() {
                 <div className="main-content">
                     <img src={logoImg} alt="letmeask" />
                     <h1>{user?.name}</h1>
+
                     <h2>Crie uma nova sala</h2>
 
                     <form>
@@ -34,8 +37,7 @@ export function NewRoom() {
                             Criar sala
                         </Button>
                     </form>
-
-                    <p>Quenr entrar em uma sala existente? <Link to="/">Clique Aqui</Link></p>
+                    <p>Quer entrar em uma sala existente? <Link to="/">Clique Aqui</Link></p>
                 </div>
             </main>
 
