@@ -31,7 +31,6 @@ export function NewRoom() {
 
         history.push(`/rooms/${firebaseRoom.key}`)
     }
-    
 
     return (
         <div id="page-auth">
@@ -57,8 +56,7 @@ export function NewRoom() {
                             Criar sala
                         </Button>
                     </form>
-
-                    <p>Quenr entrar em uma sala existente? <Link to="/">Clique Aqui</Link></p>
+                    <p>Quer entrar em uma sala existente? <Link to="/">Clique Aqui</Link></p>
                 </div>
             </main>
 
